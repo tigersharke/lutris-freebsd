@@ -1,5 +1,5 @@
 PORTNAME=		lutris
-DISTVERSION=		g20220401
+DISTVERSION=		g20220408
 CATEGORIES=		games
 PKGNAMEPREFIX=		${PY_FLAVOR}-
 PKGNAMESUFFIX=		-freebsd
@@ -11,7 +11,7 @@ COMMENT=		Free and open source game manager for Linux-based operating systems
 
 LICENSE=		GPLv3
 
-BROKEN=			builds but it seems there may be something wrong with tls for account access widget.
+BROKEN=			builds but mostly does not work.
 BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
@@ -42,6 +42,7 @@ RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			glxinfo:graphics/mesa-demos \
 			${PYTHON_PKGNAMEPREFIX}nose-cov>0:devel/py-nose-cov@${PY_FLAVOR} \
 			Xvfb:x11-servers/xorg-vfbserver \
+			pylint:devel/pylint \
 			pstree:sysutils/psmisc \
 			cabextract:archivers/cabextract \
 			${LOCALBASE}/bin/unzip:archivers/unzip \
@@ -63,7 +64,7 @@ USES=			gl gnome localbase:ldflags pkgconfig python:-3.10 desktop-file-utils \
 USE_GNOME=		cairo glib20 gtk30 gnomeprefix gnomedesktop3 gdkpixbuf2 intlhack \
 			introspection libxml2 libxslt pygobject3
 
-USE_PYTHON=		distutils autoplist
+USE_PYTHON=		distutils
 
 USE_XORG=		dmx pciaccess x11 ice xau xdmcp xrandr
 USE_GL=			gl
@@ -74,7 +75,7 @@ SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		d4f77d6b259a75b067bed5ba7c689edc6832a32e
+GH_TAGNAME=		c8fef40b4f33d2a74b04577a970675b76129d702
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
@@ -91,9 +92,15 @@ WINE_DESC=		Windows support
 WINE_RUN_DEPENDS=	wine:emulators/wine
 
 VULKAN_DESCR=		Vulkan support
-VULKAN_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
-VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
-VULKAN_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
+VULKAN_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
+			vulkan-loader>0:graphics/vulkan-loader \
+			vulkan-extension-layer>0:graphics/vulkan-extension-layer
+VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
+			libVkLayer_khronos_synchronization2.so:graphics/vulkan-extension-layer \
+			libVkLayer_khronos_timeline_semaphore.so:graphics/vulkan-extension-layer
+VULKAN_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
+			${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader \
+			vulkan-extension-layer>0:graphics/vulkan-extension-layer
 
 VULKAN3D_DESCR=		Vulkan3D support (implies Vulkan)
 VULKAN3D_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
@@ -110,6 +117,8 @@ VULKAN3D_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-heade
 # Find options toggles:
 # - gnutls seems to be used regardless
 # - NLS seems to add no other files
+# Need to figure out how to help it find missing things during runtime.
+# 
 #Depends: ${misc:Depends},
 #         ${python3:Depends},
 #         python3-yaml,
