@@ -1,6 +1,7 @@
 PORTNAME=		lutris
-DISTVERSION=		g20210927
+DISTVERSION=		g20220331
 CATEGORIES=		games
+PKGNAMEPREFIX=		${PY_FLAVOR}-
 PKGNAMESUFFIX=		-freebsd
 DISTNAME=		${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=		${PORTNAME}${PKGNAMESUFFIX}
@@ -10,7 +11,7 @@ COMMENT=		Free and open source game manager for Linux-based operating systems
 
 LICENSE=		GPLv3
 
-BROKEN=			very incomplete though python portion seems functional - attempt at own risk
+BROKEN=			builds but it seems there may be something wrong with tls for account access widget.
 
 BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}evdev>0:devel/py-evdev@${PY_FLAVOR} \
@@ -56,11 +57,12 @@ LIB_DEPENDS=		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 			libdbus-1.so:devel/dbus \
 			libcurl.so:ftp/curl
 
-USES=			gl gnome localbase:ldflags pkgconfig python:3.4+ desktop-file-utils \
-			shebangfix ssl xorg
+USES=			gl gnome localbase:ldflags pkgconfig python:-3.10 desktop-file-utils \
+			shebangfix xorg
 
 USE_GNOME=		cairo glib20 gtk30 gnomeprefix gnomedesktop3 gdkpixbuf2 intlhack \
-			introspection libxml2 libxslt pygobject3
+			introspection libxml2 libxslt
+#			introspection libxml2 libxslt pygobject3
 INSTALLS_ICONS=		yes
 
 USE_PYTHON=		distutils
@@ -74,24 +76,22 @@ SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		9c5ab57ab68d40653ff755731f6c2ad01f19e6bf
+GH_TAGNAME=		d474f704c94709b65f4956089bbb5e796f8fb445
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
 
-OPTIONS_DEFINE=		NLS GTLS GVFS WINE VULKAN VULKAN3D
-#OPTIONS_DEFINE=	NLS GVFS WINE VULKAN VULKAN3D
+OPTIONS_DEFINE=		NLS GNUTLS GVFS WINE VULKAN VULKAN3D
 OPTIONS_DEFAULT=
 
 NLS_USES=		gettext
 
-GTLS_DESCR=		tls support via gnutls
-GTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
+GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 
 GVFS_USE=		GNOME=gvfs
 
 WINE_DESC=		Windows support
-WINE_RUN_DEPENDS=	wine:emulators/i386-wine
+WINE_RUN_DEPENDS=	wine:emulators/wine
 
 VULKAN_DESCR=		Vulkan support
 VULKAN_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
@@ -107,3 +107,5 @@ VULKAN3D_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-heade
 .include <bsd.port.options.mk>
 
 .include <bsd.port.mk>
+#
+# Note that pkg-plist as generated looks good, a few lines incorporate lutris version in the path. 
