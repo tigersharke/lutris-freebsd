@@ -1,3 +1,4 @@
+/you/have/to/check/what/makeplist/gives/you
 bin/lutris
 %%PYTHON_SITELIBDIR%%/lutris-0.5.10-py%%PYTHON_VER%%.egg-info/PKG-INFO
 %%PYTHON_SITELIBDIR%%/lutris-0.5.10-py%%PYTHON_VER%%.egg-info/SOURCES.txt
