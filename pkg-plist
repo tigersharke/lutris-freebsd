@@ -479,8 +479,6 @@ bin/lutris
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/jobs%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/joypad%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/joypad%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/keyring%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/keyring%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/libretro%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/libretro%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/linux%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
@@ -565,7 +563,6 @@ bin/lutris
 %%PYTHON_SITELIBDIR%%/lutris/util/i18n.py
 %%PYTHON_SITELIBDIR%%/lutris/util/jobs.py
 %%PYTHON_SITELIBDIR%%/lutris/util/joypad.py
-%%PYTHON_SITELIBDIR%%/lutris/util/keyring.py
 %%PYTHON_SITELIBDIR%%/lutris/util/libretro.py
 %%PYTHON_SITELIBDIR%%/lutris/util/linux.py
 %%PYTHON_SITELIBDIR%%/lutris/util/log.py
