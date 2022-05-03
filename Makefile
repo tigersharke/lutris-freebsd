@@ -1,5 +1,5 @@
 PORTNAME=		lutris
-DISTVERSION=		g20220416
+DISTVERSION=		g20220418
 CATEGORIES=		games
 PKGNAMEPREFIX=		${PY_FLAVOR}-
 PKGNAMESUFFIX=		-freebsd
@@ -75,7 +75,7 @@ SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		d2e1715839f2334b75817904cdf79593c5e0b722
+GH_TAGNAME=		58baae92a9915e2f0037b794ab92d1413b6ca641
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
@@ -149,6 +149,7 @@ VULKAN3D_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-heade
 #
 # after build but before install?
 # need to modify utils/linux.py
+# need to modify utils/display.py
 # to have ldconfig -r, replace lspci with pciconf -lv, and more.
 # modify multiarch lib folders to more appropriate.
 # Eventually re-write entire linux.py as freebsd.py with appropriate info.
