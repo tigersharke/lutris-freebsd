@@ -1,5 +1,5 @@
 PORTNAME=		lutris
-DISTVERSION=		g20220414
+DISTVERSION=		g20220416
 CATEGORIES=		games
 PKGNAMEPREFIX=		${PY_FLAVOR}-
 PKGNAMESUFFIX=		-freebsd
@@ -11,7 +11,7 @@ COMMENT=		Free and open source game manager for Linux-based operating systems
 
 LICENSE=		GPLv3
 
-BROKEN=			builds but mostly does not work.
+#BROKEN=			builds but mostly does not work.
 BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
@@ -75,7 +75,7 @@ SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		0cba7b7327782858eabe93c1daf255b925a82806
+GH_TAGNAME=		d2e1715839f2334b75817904cdf79593c5e0b722
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
