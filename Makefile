@@ -11,7 +11,7 @@ COMMENT=		Free and open source game manager for Linux-based operating systems
 
 LICENSE=		GPLv3
 
-#BROKEN=			builds but mostly does not work.
+BROKEN=			builds but mostly does not work.
 BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
