@@ -58,18 +58,20 @@ LIB_DEPENDS=		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 			libdbus-1.so:devel/dbus \
 			libcurl.so:ftp/curl
 
-USES=			gl gnome localbase:ldflags pkgconfig python:-3.10 desktop-file-utils \
+USES=			linux gl gnome localbase:ldflags pkgconfig python:-3.10 desktop-file-utils \
 			shebangfix xorg
 
 USE_GNOME=		cairo glib20 gtk30 gnomeprefix gnomedesktop3 gdkpixbuf2 intlhack \
 			introspection libxml2 libxslt pygobject3
 
-USE_PYTHON=		distutils
+USE_PYTHON=		distutils concurrent
 
 USE_XORG=		dmx pciaccess x11 ice xau xdmcp xrandr
 USE_GL=			gl
 
 USE_GITHUB=		nodefault
+
+NO_ARCH=		yes
 
 SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
 
@@ -107,6 +109,11 @@ VULKAN3D_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-hea
 VULKAN3D_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
 			libvkd3d.so:graphics/vkd3d
 VULKAN3D_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/proc|/compat/linux/proc|g' ${WRKSRC}/lutris/util/graphics/drivers.py
+	@${REINPLACE_CMD} -e 's|/proc|/compat/linux/proc|g' ${WRKSRC}/lutris/util/linux.py
+	@${REINPLACE_CMD} -e 's|/proc|/compat/linux/proc|g' ${WRKSRC}/lutris/util/process.py
 
 .include <bsd.port.options.mk>
 
