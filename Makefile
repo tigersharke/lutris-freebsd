@@ -1,5 +1,5 @@
 PORTNAME=		lutris
-DISTVERSION=		g20220502
+DISTVERSION=		g20230103
 CATEGORIES=		games
 PKGNAMEPREFIX=		${PY_FLAVOR}-
 PKGNAMESUFFIX=		-freebsd
@@ -8,10 +8,12 @@ DIST_SUBDIR=		${PORTNAME}${PKGNAMESUFFIX}
 
 MAINTAINER=		nope@nothere
 COMMENT=		Free and open source game manager for Linux-based operating systems
+WWW=			https://lutris.net/
 
 LICENSE=		GPLv3
 
-BROKEN=			builds but mostly does not work.
+BROKEN=			builds but mostly does not work
+PY_FLAVOR=		py39
 BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
@@ -26,8 +28,8 @@ BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
 			glxinfo:graphics/mesa-demos \
 			${PYTHON_PKGNAMEPREFIX}nose-cov>0:devel/py-nose-cov@${PY_FLAVOR} \
-			Xvfb:x11-servers/xorg-vfbserver \
-			pylint:devel/pylint
+			Xvfb:x11-servers/xorg-vfbserver
+#			pylint:devel/pylint@{PY_FLAVOR}
 RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
@@ -42,7 +44,6 @@ RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			glxinfo:graphics/mesa-demos \
 			${PYTHON_PKGNAMEPREFIX}nose-cov>0:devel/py-nose-cov@${PY_FLAVOR} \
 			Xvfb:x11-servers/xorg-vfbserver \
-			pylint:devel/pylint \
 			pstree:sysutils/psmisc \
 			cabextract:archivers/cabextract \
 			${LOCALBASE}/bin/unzip:archivers/unzip \
@@ -54,6 +55,7 @@ RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			xdg-open:devel/xdg-utils \
 			${PYTHON_PKGNAMEPREFIX}evdev>0:devel/py-evdev@${PY_FLAVOR} \
 			winetricks:emulators/winetricks
+#			pylint:devel/pylint
 LIB_DEPENDS=		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 			libdbus-1.so:devel/dbus \
 			libcurl.so:ftp/curl
@@ -77,7 +79,7 @@ SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		8bc49aa12b19c66cef78ec53ec80b3c5506341db
+GH_TAGNAME=		c9a0635cb7b507b54371596aac9aee699c8cabdc
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
