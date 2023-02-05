@@ -104,7 +104,8 @@ VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
 			libVkLayer_khronos_timeline_semaphore.so:graphics/vulkan-extension-layer
 VULKAN_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
 			${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader \
-			vulkan-extension-layer>0:graphics/vulkan-extension-layer
+			vulkan-extension-layer>0:graphics/vulkan-extension-layer \
+			${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader
 
 VULKAN3D_DESCR=		Vulkan3D support (implies Vulkan)
 VULKAN3D_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
