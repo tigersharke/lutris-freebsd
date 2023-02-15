@@ -1,5 +1,5 @@
 PORTNAME=		lutris
-DISTVERSION=		g20230206
+DISTVERSION=		g20230208
 CATEGORIES=		games
 PKGNAMEPREFIX=		${PY_FLAVOR}-
 PKGNAMESUFFIX=		-freebsd
@@ -28,7 +28,7 @@ BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
 			glxinfo:graphics/mesa-demos \
 			${PYTHON_PKGNAMEPREFIX}nose-cov>0:devel/py-nose-cov@${PY_FLAVOR} \
-			Xvfb:x11-servers/xorg-vfbserver
+			Xvfb:x11-servers/xorg-server
 #			pylint:devel/pylint@{PY_FLAVOR}
 RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
@@ -43,12 +43,12 @@ RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
 			glxinfo:graphics/mesa-demos \
 			${PYTHON_PKGNAMEPREFIX}nose-cov>0:devel/py-nose-cov@${PY_FLAVOR} \
-			Xvfb:x11-servers/xorg-vfbserver \
+			Xvfb:x11-servers/xorg-server \
 			pstree:sysutils/psmisc \
 			cabextract:archivers/cabextract \
 			${LOCALBASE}/bin/unzip:archivers/unzip \
 			zip:archivers/zip \
-			7z:archivers/p7zip \
+			7z:archivers/7-zip \
 			curl:ftp/curl \
 			${LOCALBASE}/share/sounds/sf2/FluidR3_GM.sf2:audio/fluid-soundfont \
 			appstream-builder:devel/appstream-glib \
@@ -79,7 +79,7 @@ SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		0879886ffcce9eea4f11e95e6e0ef1d562115b37
+GH_TAGNAME=		5582315824ea35bc96469b3c515a97de81f26a1a
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
