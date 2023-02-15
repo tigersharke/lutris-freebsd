@@ -78,8 +78,8 @@ bin/lutris
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/__init__.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/add_game%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/add_game%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/add_game_dialog%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/add_game_dialog%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/base_config_box%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/base_config_box%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/boxes%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
@@ -102,7 +102,7 @@ bin/lutris
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/services_box%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/sysinfo_box%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/__pycache__/sysinfo_box%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/lutris/gui/config/add_game.py
+%%PYTHON_SITELIBDIR%%/lutris/gui/config/add_game_dialog.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/base_config_box.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/boxes.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/config/common.py
