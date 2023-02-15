@@ -1,5 +1,5 @@
 PORTNAME=		lutris
-DISTVERSION=		g20230209
+DISTVERSION=		g20230210
 CATEGORIES=		games
 PKGNAMEPREFIX=		${PY_FLAVOR}-
 PKGNAMESUFFIX=		-freebsd
@@ -79,7 +79,7 @@ SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		75f87f62dccfd10295242a7dc2e0761794cdd4c5
+GH_TAGNAME=		ad20ddd4d7cdab5bf566e4c5c18c686d3d35fce6
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
