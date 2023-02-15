@@ -547,6 +547,15 @@ bin/lutris
 %%PYTHON_SITELIBDIR%%/lutris/util/amazon/protobuf_decoder.py
 %%PYTHON_SITELIBDIR%%/lutris/util/amazon/sds_proto2.py
 %%PYTHON_SITELIBDIR%%/lutris/util/audio.py
+%%PYTHON_SITELIBDIR%%/lutris/util/battlenet/__init__.py
+%%PYTHON_SITELIBDIR%%/lutris/util/battlenet/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/util/battlenet/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/util/battlenet/__pycache__/definitions%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/util/battlenet/__pycache__/definitions%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/util/battlenet/__pycache__/product_db_pb2%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/util/battlenet/__pycache__/product_db_pb2%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/util/battlenet/definitions.py
+%%PYTHON_SITELIBDIR%%/lutris/util/battlenet/product_db_pb2.py
 %%PYTHON_SITELIBDIR%%/lutris/util/cookies.py
 %%PYTHON_SITELIBDIR%%/lutris/util/datapath.py
 %%PYTHON_SITELIBDIR%%/lutris/util/discord/__init__.py

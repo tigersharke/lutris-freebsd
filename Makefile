@@ -1,5 +1,5 @@
 PORTNAME=		lutris
-DISTVERSION=		g20230127
+DISTVERSION=		g20230128
 CATEGORIES=		games
 PKGNAMEPREFIX=		${PY_FLAVOR}-
 PKGNAMESUFFIX=		-freebsd
@@ -12,7 +12,7 @@ WWW=			https://lutris.net/
 
 LICENSE=		GPLv3
 
-BROKEN=			builds but mostly does not work
+BROKEN=			builds but uncertain whether does not work, TRYBROKEN=true to test.
 PY_FLAVOR=		py39
 BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
 			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
@@ -79,7 +79,7 @@ SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		12ec851f5c60bebbb0d04b1a7c9e1d3e6613c480
+GH_TAGNAME=		c6fef12a2310d7178d5a8d8358bd5a6a5ff16934
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
