@@ -1,5 +1,4 @@
 bin/lutris
-bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris-0.5.12-py%%PYTHON_VER%%.egg-info/PKG-INFO
 %%PYTHON_SITELIBDIR%%/lutris-0.5.12-py%%PYTHON_VER%%.egg-info/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/lutris-0.5.12-py%%PYTHON_VER%%.egg-info/dependency_links.txt
@@ -124,6 +123,8 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/__pycache__/delegates%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/__pycache__/download%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/__pycache__/download%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/__pycache__/game_import%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/__pycache__/game_import%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/__pycache__/issue%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/__pycache__/issue%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/__pycache__/log%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
@@ -137,6 +138,7 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/cache.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/delegates.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/download.py
+%%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/game_import.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/issue.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/log.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/dialogs/runner_install.py
@@ -200,6 +202,8 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/__pycache__/gi_composites%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/__pycache__/log_text_view%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/__pycache__/log_text_view%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/gui/widgets/__pycache__/navigation_stack%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/gui/widgets/__pycache__/navigation_stack%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/__pycache__/notifications%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/__pycache__/notifications%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/__pycache__/searchable_combobox%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
@@ -219,6 +223,7 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/game_bar.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/gi_composites.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/log_text_view.py
+%%PYTHON_SITELIBDIR%%/lutris/gui/widgets/navigation_stack.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/notifications.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/searchable_combobox.py
 %%PYTHON_SITELIBDIR%%/lutris/gui/widgets/sidebar.py
@@ -383,12 +388,18 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/scanners/__init__.py
 %%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/default_installers%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/default_installers%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/lutris%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/lutris%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/retroarch%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/retroarch%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/tosec%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/scanners/__pycache__/tosec%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/scanners/default_installers.py
 %%PYTHON_SITELIBDIR%%/lutris/scanners/lutris.py
 %%PYTHON_SITELIBDIR%%/lutris/scanners/retroarch.py
+%%PYTHON_SITELIBDIR%%/lutris/scanners/tosec.py
 %%PYTHON_SITELIBDIR%%/lutris/services/__init__.py
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/__init__%%PYTHON_EXT_SUFFIX%%.pyc
@@ -426,8 +437,6 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/steam%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/steamwindows%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/steamwindows%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/tosec%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/tosec%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/ubisoft%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/ubisoft%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/xdg%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
@@ -449,7 +458,6 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/services/service_media.py
 %%PYTHON_SITELIBDIR%%/lutris/services/steam.py
 %%PYTHON_SITELIBDIR%%/lutris/services/steamwindows.py
-%%PYTHON_SITELIBDIR%%/lutris/services/tosec.py
 %%PYTHON_SITELIBDIR%%/lutris/services/ubisoft.py
 %%PYTHON_SITELIBDIR%%/lutris/services/xdg.py
 %%PYTHON_SITELIBDIR%%/lutris/settings.py
@@ -497,6 +505,8 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/log%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/magic%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/magic%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/moddb%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/moddb%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/nvidia%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/nvidia%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/__pycache__/process%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
@@ -609,6 +619,7 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/util/mame/__pycache__/ini%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/util/mame/database.py
 %%PYTHON_SITELIBDIR%%/lutris/util/mame/ini.py
+%%PYTHON_SITELIBDIR%%/lutris/util/moddb.py
 %%PYTHON_SITELIBDIR%%/lutris/util/nvidia.py
 %%PYTHON_SITELIBDIR%%/lutris/util/process.py
 %%PYTHON_SITELIBDIR%%/lutris/util/process_watcher.py
