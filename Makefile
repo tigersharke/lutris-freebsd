@@ -1,10 +1,10 @@
 PORTNAME=		lutris
-DISTVERSION=		g20230308
+DISTVERSION=	g20240824
 CATEGORIES=		games
-PKGNAMEPREFIX=		${PY_FLAVOR}-
-PKGNAMESUFFIX=		-freebsd
+PKGNAMEPREFIX=	${PY_FLAVOR}-
+PKGNAMESUFFIX=	-freebsd
 DISTNAME=		${PORTNAME}-${GH_TAGNAME}
-DIST_SUBDIR=		${PORTNAME}${PKGNAMESUFFIX}
+DIST_SUBDIR=	${PORTNAME}${PKGNAMESUFFIX}
 
 MAINTAINER=		nope@nothere
 COMMENT=		Free and open source game manager for Linux-based operating systems
@@ -13,105 +13,96 @@ WWW=			https://lutris.net/
 LICENSE=		GPLv3
 
 BROKEN=			builds but uncertain how much it works, TRYBROKEN=true to test.
-PY_FLAVOR=		py39
-BUILD_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}gobject3>0:devel/py-gobject3@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}setproctitle>0:devel/py-setproctitle@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}python-magic>0:devel/py-python-magic@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}notify2>0:devel/py-notify2@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}evdev>0:devel/py-evdev@${PY_FLAVOR} \
-			${LOCALBASE}/include/GL/internal/dri_interface.h:graphics/mesa-dri \
-			${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
-			glxinfo:graphics/mesa-demos \
-			${PYTHON_PKGNAMEPREFIX}nose-cov>0:devel/py-nose-cov@${PY_FLAVOR} \
-			Xvfb:x11-servers/xorg-server
-#			pylint:devel/pylint@{PY_FLAVOR}
-RUN_DEPENDS=		${PYTHON_PKGNAMEPREFIX}yaml>=4:devel/py-yaml@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}gobject3>0:devel/py-gobject3@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}setproctitle>0:devel/py-setproctitle@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}python-magic>0:devel/py-python-magic@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}dbus>=0:devel/py-dbus@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}notify2>0:devel/py-notify2@${PY_FLAVOR} \
-			${LOCALBASE}/include/GL/internal/dri_interface.h:graphics/mesa-dri \
-			${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
-			glxinfo:graphics/mesa-demos \
-			${PYTHON_PKGNAMEPREFIX}nose-cov>0:devel/py-nose-cov@${PY_FLAVOR} \
-			Xvfb:x11-servers/xorg-server \
-			pstree:sysutils/psmisc \
-			cabextract:archivers/cabextract \
-			${LOCALBASE}/bin/unzip:archivers/unzip \
-			zip:archivers/zip \
-			7z:archivers/7-zip \
-			curl:ftp/curl \
-			${LOCALBASE}/share/sounds/sf2/FluidR3_GM.sf2:audio/fluid-soundfont \
-			appstream-builder:devel/appstream-glib \
-			xdg-open:devel/xdg-utils \
-			${PYTHON_PKGNAMEPREFIX}evdev>0:devel/py-evdev@${PY_FLAVOR} \
-			winetricks:emulators/winetricks
-#			pylint:devel/pylint
-LIB_DEPENDS=		libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
-			libdbus-1.so:devel/dbus \
-			libcurl.so:ftp/curl
+PY_FLAVOR=		py311
+RUN_DEPENDS= \
+				${LOCALBASE}/include/GL/internal/dri_interface.h:graphics/mesa-dri \
+				${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri
+#RUN_DEPENDS= \
+#			${PYTHON_PKGNAMEPREFIX}lxml>0:devel/py-lxml@${PY_FLAVOR} \
+#			${PYTHON_PKGNAMEPREFIX}requests>0:www/py-requests@${PY_FLAVOR} \
+#			${PYTHON_PKGNAMEPREFIX}pillow>0:graphics/py-pillow@${PY_FLAVOR} \
+#			${PYTHON_PKGNAMEPREFIX}gobject3>0:devel/py-gobject3@${PY_FLAVOR} \
+#			${PYTHON_PKGNAMEPREFIX}setproctitle>0:devel/py-setproctitle@${PY_FLAVOR} \
+#			${PYTHON_PKGNAMEPREFIX}python-magic>0:devel/py-python-magic@${PY_FLAVOR} \
+#			${PYTHON_PKGNAMEPREFIX}dbus>0:devel/py-dbus@${PY_FLAVOR} \
+#			${PYTHON_PKGNAMEPREFIX}notify2>0:devel/py-notify2@${PY_FLAVOR} \
+#			${LOCALBASE}/include/GL/internal/dri_interface.h:graphics/mesa-dri \
+#			${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
+#			glxinfo:graphics/mesa-demos \
+#			${PYTHON_PKGNAMEPREFIX}nose-cov>0:devel/py-nose-cov@${PY_FLAVOR} \
+#			Xvfb:x11-servers/xorg-server \
+#			pstree:sysutils/psmisc \
+#			cabextract:archivers/cabextract \
+#			${LOCALBASE}/bin/unzip:archivers/unzip \
+#			zip:archivers/zip \
+#			7z:archivers/7-zip \
+#			curl:ftp/curl \
+#			${LOCALBASE}/share/sounds/sf2/FluidR3_GM.sf2:audio/fluid-soundfont \
+#			appstream-builder:devel/appstream-glib \
+#			xdg-open:devel/xdg-utils \
+#			${PYTHON_PKGNAMEPREFIX}evdev>0:devel/py-evdev@${PY_FLAVOR} \
+#			winetricks:emulators/winetricks
+#			${PYTHON_PKGNAMEPREFIX}pyyaml>=0:devel/py-pyyaml@${PY_FLAVOR} \
+LIB_DEPENDS= \
+				libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
+				libdbus-1.so:devel/dbus \
+				libcurl.so:ftp/curl \
+				libtasan1.so.6:security/libtasn1 \
+				libxkbregistry.so:x11/libxkbcommon
 
-USES=			linux gl gnome localbase:ldflags pkgconfig python:-3.10 desktop-file-utils \
-			shebangfix xorg
+USES=			linux gl gnome localbase:ldflags pkgconfig python:-3.12 desktop-file-utils \
+				shebangfix xorg
 
 USE_GNOME=		cairo glib20 gtk30 gnomeprefix gnomedesktop3 gdkpixbuf2 intlhack \
-			introspection libxml2 libxslt pygobject3
+				introspection libxml2 libxslt pygobject3
 
 USE_PYTHON=		distutils concurrent
 
-USE_XORG=		dmx pciaccess x11 ice xau xdmcp xrandr
+USE_XORG=		pciaccess x11 ice xau xdmcp xrandr
 USE_GL=			gl
 
 USE_GITHUB=		nodefault
 
 NO_ARCH=		yes
 
-SHEBANG_FILES=		share/lutris/bin/lutris-wrapper
+SHEBANG_FILES=	share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		990e8c3b3b761da02635d885f8dfd56e624e7eea
+GH_TAGNAME=		0849c108780140805bbe8f054a5fb1dd7f8f2f9a
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
-OPTIONS_DEFINE=		NLS GNUTLS GVFS WINE VULKAN VULKAN3D
-OPTIONS_DEFAULT=	NLS GNUTLS GVFS WINE VULKAN VULKAN3D
+OPTIONS_DEFINE=	NLS GNUTLS WINE VULKAN #VULKAN3D GVFS
+OPTIONS_DEFAULT=NLS GNUTLS WINE VULKAN #VULKAN3D GVFS
 
 NLS_USES=		gettext
 
 GNUTLS_LIB_DEPENDS=	libgnutls.so:security/gnutls
 
-GVFS_USE=		GNOME=gvfs
+#GVFS_DESCR=		gnome virtual filesystem support --broken--
+#GVFS_USE=		GNOME=gvfs
 
 WINE_DESC=		Windows support
 WINE_RUN_DEPENDS=	wine:emulators/wine
 
 VULKAN_DESCR=		Vulkan support
 VULKAN_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
-			vulkan-loader>0:graphics/vulkan-loader \
-			vulkan-extension-layer>0:graphics/vulkan-extension-layer
+						vulkan-loader>0:graphics/vulkan-loader \
+						vulkan-extension-layer>0:graphics/vulkan-extension-layer
 VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
-			libVkLayer_khronos_synchronization2.so:graphics/vulkan-extension-layer \
-			libVkLayer_khronos_timeline_semaphore.so:graphics/vulkan-extension-layer
+					libVkLayer_khronos_synchronization2.so:graphics/vulkan-extension-layer \
+					libVkLayer_khronos_timeline_semaphore.so:graphics/vulkan-extension-layer
 VULKAN_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
-			${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader \
-			vulkan-extension-layer>0:graphics/vulkan-extension-layer \
-			${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader
+					${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader \
+					vulkan-extension-layer>0:graphics/vulkan-extension-layer \
+					${LOCALBASE}/lib/libvulkan.so:graphics/vulkan-loader
 
-VULKAN3D_DESCR=		Vulkan3D support (implies Vulkan)
-VULKAN3D_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
-VULKAN3D_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
-			libvkd3d.so:graphics/vkd3d
-VULKAN3D_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
+#VULKAN3D_DESCR=			Vulkan3D support (implies Vulkan)
+#VULKAN3D_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
+#VULKAN3D_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
+#						libvkd3d.so:graphics/vkd3d
+#VULKAN3D_RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/proc|/compat/linux/proc|g' ${WRKSRC}/lutris/util/graphics/drivers.py

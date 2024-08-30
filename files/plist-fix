@@ -1,0 +1,14 @@
+#!/bin/sh
+rm /var/tmp/lutris-freebsd-plist 2>/dev/null
+rm /var/tmp/lutris-freebsd-plist-fixed 2>/dev/null
+cp ../pkg-plist /var/tmp/lutris-freebsd-plist
+
+#echo "adding conditional list tags"
+echo "adjusting"
+
+cat /var/tmp/lutris-freebsd-plist | \
+sed \
+-e 's#^\/you\/have\/to\/check\/what\/makeplist\/gives\/you##' \
+-e '/^$/d' \
+> /var/tmp/minetest-dev_pkg-plist-fixed
+cp /var/tmp/minetest-dev_pkg-plist-fixed ../pkg-plist
