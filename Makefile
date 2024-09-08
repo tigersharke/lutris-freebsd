@@ -1,5 +1,5 @@
 PORTNAME=		lutris
-DISTVERSION=	g20240824
+DISTVERSION=	g20240904
 CATEGORIES=		games
 PKGNAMEPREFIX=	${PY_FLAVOR}-
 PKGNAMESUFFIX=	-freebsd
@@ -12,7 +12,7 @@ WWW=			https://lutris.net/
 
 LICENSE=		GPLv3
 
-PY_FLAVOR=		py311
+#PY_FLAVOR=		py311
 RUN_DEPENDS= \
 				${LOCALBASE}/include/GL/internal/dri_interface.h:graphics/mesa-dri \
 				${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \
@@ -51,7 +51,7 @@ LIB_DEPENDS= \
 				libxkbregistry.so:x11/libxkbcommon \
 				libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 
-USES=			display:Xvfb linux gl gnome localbase:ldflags pkgconfig python:-3.12 desktop-file-utils \
+USES=			display:Xvfb linux gl gnome localbase:ldflags pkgconfig python:3.11 desktop-file-utils \
 				shebangfix xorg
 
 USE_GNOME=		cairo glib20 gtk30 gnomeprefix gnomedesktop3 gdkpixbuf2 intlhack \
@@ -70,7 +70,7 @@ SHEBANG_FILES=	share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		0849c108780140805bbe8f054a5fb1dd7f8f2f9a
+GH_TAGNAME=		3ec23ac521871e2ba648d64a7734cfc78eb8b9bc
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
