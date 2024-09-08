@@ -12,7 +12,6 @@ WWW=			https://lutris.net/
 
 LICENSE=		GPLv3
 
-BROKEN=			builds but uncertain how much it works, TRYBROKEN=true to test.
 PY_FLAVOR=		py311
 RUN_DEPENDS= \
 				${LOCALBASE}/include/GL/internal/dri_interface.h:graphics/mesa-dri \
@@ -52,7 +51,7 @@ LIB_DEPENDS= \
 				libxkbregistry.so:x11/libxkbcommon \
 				libwebkit2gtk-4.0.so:www/webkit2-gtk3 \
 
-USES=			linux gl gnome localbase:ldflags pkgconfig python:-3.12 desktop-file-utils \
+USES=			display:Xvfb linux gl gnome localbase:ldflags pkgconfig python:-3.12 desktop-file-utils \
 				shebangfix xorg
 
 USE_GNOME=		cairo glib20 gtk30 gnomeprefix gnomedesktop3 gdkpixbuf2 intlhack \
