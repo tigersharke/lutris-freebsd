@@ -12,7 +12,7 @@ WWW=			https://lutris.net/
 
 LICENSE=		GPLv3
 
-#PY_FLAVOR=		py311
+PY_FLAVOR=		py311
 RUN_DEPENDS= \
 				${LOCALBASE}/include/GL/internal/dri_interface.h:graphics/mesa-dri \
 				${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri \

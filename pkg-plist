@@ -1,5 +1,4 @@
 bin/lutris
-bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris-0.5.17-py%%PYTHON_VER%%.egg-info/PKG-INFO
 %%PYTHON_SITELIBDIR%%/lutris-0.5.17-py%%PYTHON_VER%%.egg-info/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/lutris-0.5.17-py%%PYTHON_VER%%.egg-info/dependency_links.txt
@@ -844,6 +843,5 @@ share/lutris/ui/log-window.ui
 share/lutris/ui/lutris-window.ui
 share/lutris/ui/lutris.css
 share/lutris/ui/uninstall-dialog.ui
-share/man/man1/lutris-%%PYTHON_VER%%.1.gz
 share/man/man1/lutris.1.gz
 share/metainfo/net.lutris.Lutris.metainfo.xml

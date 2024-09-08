@@ -9,6 +9,7 @@ echo "adjusting"
 cat /var/tmp/lutris-freebsd-plist | \
 sed \
 -e 's#^\/you\/have\/to\/check\/what\/makeplist\/gives\/you##' \
+-e 's#share\/man\/man1\/lutris-%%PYTHON_VER%%.1.gz##' \
 -e '/^$/d' \
 > /var/tmp/minetest-dev_pkg-plist-fixed
 cp /var/tmp/minetest-dev_pkg-plist-fixed ../pkg-plist
