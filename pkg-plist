@@ -1,4 +1,5 @@
 bin/lutris
+bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris-0.5.17-py%%PYTHON_VER%%.egg-info/PKG-INFO
 %%PYTHON_SITELIBDIR%%/lutris-0.5.17-py%%PYTHON_VER%%.egg-info/SOURCES.txt
 %%PYTHON_SITELIBDIR%%/lutris-0.5.17-py%%PYTHON_VER%%.egg-info/dependency_links.txt
