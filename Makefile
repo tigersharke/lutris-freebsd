@@ -1,6 +1,7 @@
 PORTNAME=		lutris
-DISTVERSION=	g20240914
+DISTVERSION=	g20241015
 CATEGORIES=		games
+MASTER_SITES= GH
 PKGNAMEPREFIX=	${PY_FLAVOR}-
 PKGNAMESUFFIX=	-freebsd
 DISTNAME=		${PORTNAME}-${GH_TAGNAME}
@@ -48,7 +49,7 @@ SHEBANG_FILES=	share/lutris/bin/lutris-wrapper
 
 GH_ACCOUNT=		lutris
 GH_PROJECT=		lutris
-GH_TAGNAME=		ac72cc3cc9aa44f8f1db52840ca793d18e66c0cf
+GH_TAGNAME=		544661bd05d4ce2c291cc026c5d885da14c1ef0b
 
 WRKSRC=			${WRKDIR}/lutris-${GH_TAGNAME}
 
@@ -63,7 +64,9 @@ GVFS_DESCR=		gnome virtual filesystem support --broken--
 GVFS_USE=		GNOME=gvfs
 
 WINE_DESC=		Windows support
-WINE_RUN_DEPENDS=	wine>0:emulators/wine
+# Need to setup a choice of which version to depend upon, maybe -devel may be better/best.
+#WINE_RUN_DEPENDS=	wine>0:emulators/wine
+WINE_RUN_DEPENDS=	wine-devel>0:emulators/wine-devel
 
 VULKAN_DESCR=		Vulkan support
 VULKAN_BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
