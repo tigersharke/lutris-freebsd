@@ -334,6 +334,8 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/runners/__pycache__/dolphin%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/runners/__pycache__/dosbox%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/runners/__pycache__/dosbox%%PYTHON_EXT_SUFFIX%%.pyc
+%%PYTHON_SITELIBDIR%%/lutris/runners/__pycache__/duckstation%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
+%%PYTHON_SITELIBDIR%%/lutris/runners/__pycache__/duckstation%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/runners/__pycache__/easyrpg%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/runners/__pycache__/easyrpg%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/runners/__pycache__/flatpak%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
@@ -409,6 +411,7 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/runners/commands/wine.py
 %%PYTHON_SITELIBDIR%%/lutris/runners/dolphin.py
 %%PYTHON_SITELIBDIR%%/lutris/runners/dosbox.py
+%%PYTHON_SITELIBDIR%%/lutris/runners/duckstation.py
 %%PYTHON_SITELIBDIR%%/lutris/runners/easyrpg.py
 %%PYTHON_SITELIBDIR%%/lutris/runners/flatpak.py
 %%PYTHON_SITELIBDIR%%/lutris/runners/fsuae.py
@@ -485,8 +488,6 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/lutris%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/mame%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/mame%%PYTHON_EXT_SUFFIX%%.pyc
-%%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/origin%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
-%%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/origin%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/scummvm%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/scummvm%%PYTHON_EXT_SUFFIX%%.pyc
 %%PYTHON_SITELIBDIR%%/lutris/services/__pycache__/service_game%%PYTHON_EXT_SUFFIX%%.opt-1.pyc
@@ -513,7 +514,6 @@ bin/lutris-%%PYTHON_VER%%
 %%PYTHON_SITELIBDIR%%/lutris/services/itchio.py
 %%PYTHON_SITELIBDIR%%/lutris/services/lutris.py
 %%PYTHON_SITELIBDIR%%/lutris/services/mame.py
-%%PYTHON_SITELIBDIR%%/lutris/services/origin.py
 %%PYTHON_SITELIBDIR%%/lutris/services/scummvm.py
 %%PYTHON_SITELIBDIR%%/lutris/services/service_game.py
 %%PYTHON_SITELIBDIR%%/lutris/services/service_media.py
